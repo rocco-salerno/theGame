@@ -6,7 +6,7 @@ int startgame()
 {
 int choice;
 string name;
-cout<<"Would you like to play a game? Press the one button to start, otherwise hit anything else to end."<<endl;
+cout<<"Would you like to play a game? Press the 1 button to start, otherwise hit anything else to end."<<endl;
 cin>>choice;
 if(choice==1)
 {
