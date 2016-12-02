@@ -21,6 +21,7 @@ else
 {
 	cout<<"Ending program"<<endl;
 }
+	return 0;
 }
 
 int main()
