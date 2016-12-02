@@ -13,6 +13,7 @@ if(choice==1)
 	cout<<"Welcome!"<<endl;
 	cout<<"Enter your name: "<<endl;
 	cin>>name;
+	//User name; makes person in user class
 	cout<<"Hello there,"<<name<<"!"<<endl;
 	cout<<"Welcome to the land of dungeons and dragons! Your goal is to defeat the dragon that attacked our village!"<<endl;
 	cout<<"You will be given a sword and some potions. Best of luck!"<<endl;
@@ -27,7 +28,11 @@ else
 
 int combat()
 {
-int enemy[4];
+string enemy= new int[3]
+for(int i=0;i=2;i++)
+{
+	//enemy{i]=Villian to make enemies enemy class 
+	     }
 int potion=3;
 int damage=2;
 int enemyhp=10;
