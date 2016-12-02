@@ -1,13 +1,22 @@
-//User.cpp
-#include <"User.h">
-using namesplace std;
+#include "user.h"
+#include <cstdlib>
+using namespace std;
 
-int User::damage()
+int User::attack()
 {
-  return damage;
+	int damage = rand()%6 +5;
+    return damage;
 }
+
 
 int User::health()
 {
-  return m_hp;
+	int health= m_hp;
+	return health;
+}
+
+int User::increaseHP()
+{
+	health = health +10;
+	return health;
 }
