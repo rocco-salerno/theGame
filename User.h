@@ -13,7 +13,7 @@ public:
 	int health(); //health the user has
 	int damage(); //damage the user inflicts
 private:
-	int m_hp=40;
+	int m_hp=100;
 	int damage=rand() %6+5
 
 };
