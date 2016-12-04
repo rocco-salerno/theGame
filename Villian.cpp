@@ -8,7 +8,6 @@ using namespace std;
 
 void Villains::attack(User& enemy)
 {
-   int damage= rand%4 +3;
    enemy.health-=damage;
    cout<<"You are attacked by the"<<Villains<<"!"<<endl;
    cout<<"You have lost"<<damage<<"HP."<<endl;
