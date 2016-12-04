@@ -1,4 +1,4 @@
-#include "user.h"
+#include "User.h"
 #include <cstdlib>
 using namespace std;
 
@@ -18,6 +18,7 @@ void User::potions(User)
 	{
 		cout<<"You used a potion!"<<endl;
 		cout<<"You have gained ten HP back!"<<endl;
+		potions=potions-1;
 		currenthealth=currenthealth+10;
 		return potions;
 	}
