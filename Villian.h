@@ -33,8 +33,10 @@ class Villians
         int enemydamage=6;
         
         void attack(user&);
+    }
    
     class Dragon
+    {
         string enemyname=Dragon;
         int enemyhealth=40;
         int enemydamage=10;
