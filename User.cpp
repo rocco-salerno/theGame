@@ -11,13 +11,17 @@ void User::attack(Villains& enemy)
 }
 
 void User::potions(User)
+{
 	if (potions==0)
 		cout<<"You are out of potions!"<<endl;
 	else
+	{
 		cout<<"You used a potion!"<<endl;
 		cout<<"You have gained ten HP back!"<<endl;
 		currenthealth=currenthealth+10;
-	return potions;
+		return potions;
+	}
+}
 
 int User::health()
 {
@@ -29,4 +33,11 @@ int User::increaseHP()
 {
 	health = health +10;
 	return health;
+}
+
+User::User(string username)
+{
+	string name=username;
+	int health=20;
+	int potions=3;
 }
