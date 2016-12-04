@@ -10,9 +10,10 @@ class User
 {
 public:
 	string setName();//names characters
-   	int attack();//how the attack works
+   	//int attack();//how the attack works
 	int increaseHP();//increment/decrement hp
 	int health(); //health the user has
+	void attack(villain&); //Has user attack villain
 private:
 	int m_hp=100;
 	int damage=rand() %6+5;
