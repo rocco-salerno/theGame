@@ -1,6 +1,7 @@
 #ifndef USER_H_
 #define USER_H_
 
+#include "Villain.h"
 #include <iostream>
 #include <string>
 #include <cstdlib> //allows the use of rand to get a random integer used by rand() % num (this would do 0 to num-1)
