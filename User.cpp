@@ -38,7 +38,7 @@ int User::increaseHP()
 
 User::User(string username)
 {
-	string name=username;
-	int health=20;
+	string name=username;//how would the string name get called if we have it in gameplay?
+	int health=`100;
 	int potions=3;
 }
