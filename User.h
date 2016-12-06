@@ -17,8 +17,7 @@ public:
 	void attack(Villains& enemy); //Has user attack villain
 private:
 	int m_hp=100;
-	int damage=rand() %6+5;
-	int potions= 5; //5 is up for suggestion. I feel we need a 
+	int potions= 3; //5 is up for suggestion. I feel we need a 
 
 };
 
