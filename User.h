@@ -1,3 +1,4 @@
+
 #ifndef USER_H_
 #define USER_H_
 
@@ -10,17 +11,19 @@ using namespace std;
 class User
 {
 public:
-	string setName();//names characters
-   	//int attack();//how the attack works
-	int increaseHP();//increment/decrement hp
-	int health(); //health the user has
-	void attack(Villains& enemy); //Has user attack villain
+	void potions(class User);//health the user has
+	int attack(class Villain&); //Has user attack villain
+	int getHealth(){return m_hp;}
+	void setHealth();
+	void setPotions();
 private:
-	int m_hp=100;
-	int potions= 5; //5 potions for the user.
+	int m_hp;//100
+	int m_potions; //5 potions for the user.
 
 };
 
 
 
+
 #endif /* USER_H_ */
+
