@@ -31,13 +31,13 @@ else
 int combat()
 { 
 string enemy= new int[3];
-for(int i=0;i=2;i++)
+for(int i=0;i==2;i++)
 {
-	 if(i=0)
+	 if(i==0)
 	  Skeleton enemy[i];
-	 if(i=1)
+	 if(i==1)
 	   Wolf enemy[i];
-	 if(i=2)
+	 if(i==2)
 	   Centaur enemy[i];
 	else 
 		cout<<"something went wrong"<<endl;
