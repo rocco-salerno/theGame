@@ -8,7 +8,7 @@ int User::attack(Villains& enemy)
 {
 	srand(time(NULL));
 	int damage = rand()%6 +5;//random attack number generator	
-	enemy.health-=damage; // enemy health is subtracted from damage generated
+	enemy.enemyhealth-=damage; // enemy health is subtracted from damage generated
 	cout<<"You used your sowrd! You inflicted: "<<damage<<"to the enemy!"<<endl;
    	return damage;
 }
