@@ -15,7 +15,7 @@ if(choice==1)
 	cout<<"Welcome!"<<endl;
 	cout<<"Enter your name: "<<endl;
 	cin>>name;
-	//User name; makes person in user class
+	User name;
 	cout<<"Hello there,"<<name<<"!"<<endl;
 	cout<<"Welcome to the land of dungeons and dragons! Your goal is to defeat the dragon that attacked our village!"<<endl;
 	cout<<"You will be given a sword and some potions. Best of luck!"<<endl;
