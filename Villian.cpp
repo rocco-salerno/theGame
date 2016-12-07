@@ -19,7 +19,7 @@ void Villains::attack(User& enemy)
 Villains::Villains(string enemyname, int enemyhealth, int enemydamage)
 {
   name=enemyname;
-  hp=enemyhealth;
+  health=enemyhealth;
   damage=enemydamage;
 }
      
