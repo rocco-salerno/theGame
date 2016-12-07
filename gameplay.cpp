@@ -61,7 +61,6 @@ if(battle==2)
 	cout<<"You have:"<<potion<<"potions left."<<endl;
 if(enemyhp<=0)
 	cout<<"You have defeated the enemy!"<<endl;
-	current=1;
 	continue;
 if(userhp<=0)
 	current=1;
