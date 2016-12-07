@@ -1,11 +1,11 @@
 #include "User.h"
 #include <cstdlib>
-#include <time>
-#include 
+#include <ctime>
 using namespace std;
 
 int User::attack(Villains& enemy)
 {
+	srand(time(NULL));
 	int damage = rand()%6 +5;	
 	enemy.health-=damage;
 	cout<<"You used your sowrd! You inflicted: "<<damage<<"to the enemy!"<<endl;
