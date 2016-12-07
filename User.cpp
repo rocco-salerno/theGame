@@ -36,6 +36,11 @@ int User::increaseHP()
 	return health;
 }
 
+int User::damage()
+{
+	return damage;
+}
+
 User::User(string username)
 {
 	string name=username;//how would the string name get called if we have it in gameplay?
