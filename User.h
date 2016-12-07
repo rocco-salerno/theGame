@@ -17,7 +17,7 @@ public:
 	void attack(Villains& enemy); //Has user attack villain
 private:
 	int m_hp=100;
-	int potions= 3; //5 is up for suggestion. I feel we need a 
+	int potions= 5; //5 potions for the user.
 
 };
 
