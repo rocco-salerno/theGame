@@ -31,6 +31,6 @@ int User::potions(User)
 User::User() //(string username)
 {
 	//string name=username;//how would the string name get called if we have it in gameplay?
-	int m_hp //
+	int m_hp;//
 	int potions=3;
 }
