@@ -23,6 +23,7 @@ if(choice==1)
 else
 {
 	cout<<"Ending program"<<endl;
+	break;
 }
 	return 0;
 }
@@ -30,7 +31,7 @@ else
 
 int combat()
 { 
-string enemy= new int[3];
+string enemy= new int[3]=[0,1,2];
 int i=0;
 for(int i=0;i==2;i++)
 {
