@@ -13,27 +13,27 @@ class Villians
             int enemyhealth=10;
             int enemydamage=2;
         
-            void attack(user&);
+            void attack(user& enemy);
     
-    }
+    };
     class Wolf
     {
         string enemyname=Wolf;
         int enemyhealth=15;
         int enemydamage=4;
         
-        void attack(user&);
+        void attack(user& enemy);
         
-    }
+    };
     
     class Centaur
     {
         string enemyname=Centaur;
-        int emenyhealth=25;
+        int enemyhealth=25;
         int enemydamage=6;
         
-        void attack(user&);
-    }
+        void attack(user& enemy);
+    };
    
     class Dragon
     {
@@ -41,7 +41,6 @@ class Villians
         int enemyhealth=40;
         int enemydamage=10;
         
-        void attack(user&);
-    }
-}
-        
+        void attack(user& enemy);
+    };
+};
