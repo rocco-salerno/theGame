@@ -8,7 +8,7 @@ int User::attack(Villains& enemy)
 	srand(time(NULL));
 	int damage = rand()%6 +5;	
 	enemy.health-=damage;
-	cout<<"You used your sowrd! You inflicted: "<<damage<<"to the enemy!"<<endl;
+	cout<<"You used your sword! You inflicted: "<<damage<<"to the enemy!"<<endl;
    	return damage;
 }
 
