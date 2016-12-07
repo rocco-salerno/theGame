@@ -32,7 +32,7 @@ else
 
 int combat()
 {
-vector< enemy(3)
+vector<string> enemy(3)
 enemy ={"Skeleton","Wolf","Centaur"}
 int i=0;
 while(user.hp != 0 || enemy= 0 )
