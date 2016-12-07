@@ -30,13 +30,13 @@ else
 
 int combat()
 { 
-string enemy= new int[3]
+string enemy= new int[3];
 for(int i=0;i=2;i++)
 {
 	 if(i=0)
 	  Skeleton enemy[i];
 	 if(i=1)
-	   Wolf enemy[1];
+	   Wolf enemy[i];
 	 if(i=2)
 	   Centaur enemy[i];
 	else 
@@ -45,7 +45,8 @@ for(int i=0;i=2;i++)
 
 cout<<"An"<<enemy<<"appears!"<<endl;
 	cout<<"What will you do?"<<endl;
-int current=2; //Initi
+int current=2; //Used for battle system
+int battle;
 while(current==2){ 
 	cout<<"Press 1 to attack, or 2 to use a potion."<<endl;
 	cin>>battle;
@@ -65,6 +66,7 @@ if(enemyhp<=0)
 if(userhp<=0)
 	current=1;
 	gameover();
+	break;
 }
 }
 
