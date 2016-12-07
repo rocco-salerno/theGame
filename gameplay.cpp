@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include "User.h"
+#include "Villain.h"
 using namespace std;
 
 int startgame()
@@ -33,13 +35,12 @@ for(int i=0;i=2;i++)
 {
 	//enemy{i]=Villian to make enemies enemy class 
 	     }
-int potion=3;
-int damage=2;
+int potion=3;	//Starting number of user's potions	
 int enemyhp=10;
 	cout<<"An"<<enemy<<"appears!"<<endl;
 	cout<<"What will you do?"<<endl;
-int battle=2;
-while(battle==2){
+int current=2; //Initi
+while(current==2){ 
 	cout<<"Press 1 to attack, or 2 to use a potion."<<endl;
 	cin>>battle;
 if(battle==1)
@@ -53,8 +54,11 @@ if(battle==2)
 	cout<<"You have:"<<potion<<"potions left."<<endl;
 if(enemyhp<=0)
 	cout<<"You have defeated the enemy!"<<endl;
-	battle=1;
+	current=1;
 	break;
+if(userhp<=0)
+	current=1;
+	gameover();
 }
 }
 
