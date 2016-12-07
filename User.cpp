@@ -1,8 +1,10 @@
 #include "User.h"
 #include <cstdlib>
+#include <time>
+#include 
 using namespace std;
 
-void User::attack(Villains& enemy)
+int User::attack(Villains& enemy)
 {
 	int damage = rand()%6 +5;	
 	enemy.health-=damage;
@@ -10,7 +12,7 @@ void User::attack(Villains& enemy)
    	return damage;
 }
 
-void User::potions(User)
+int User::potions(User)
 {
 	if (potions==0)
 		cout<<"You are out of potions!"<<endl;
@@ -34,11 +36,6 @@ int User::increaseHP()
 {
 	health = health +10;
 	return health;
-}
-
-int User::damage()
-{
-	return damage;
 }
 
 User::User(string username)
