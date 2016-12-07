@@ -26,21 +26,11 @@ int User::potions(User)
 	}
 }
 
-int User::health()
-{
-	int health= m_hp;
-	return health;
-}
 
-int User::increaseHP()
-{
-	health = health +10;
-	return health;
-}
 
-User::User(string username)
+User::User() //(string username)
 {
-	string name=username;//how would the string name get called if we have it in gameplay?
-	int health=`100;
+	//string name=username;//how would the string name get called if we have it in gameplay?
+	int m_hp //
 	int potions=3;
 }
