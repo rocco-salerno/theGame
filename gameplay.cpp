@@ -62,7 +62,7 @@ if(battle==2)
 if(enemyhp<=0)
 	cout<<"You have defeated the enemy!"<<endl;
 	current=1;
-	break;
+	continue;
 if(userhp<=0)
 	current=1;
 	gameover();
