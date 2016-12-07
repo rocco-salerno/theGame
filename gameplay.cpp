@@ -29,15 +29,21 @@ else
 
 
 int combat()
-{
+{ 
 string enemy= new int[3]
 for(int i=0;i=2;i++)
 {
-	//enemy{i]=Villian to make enemies enemy class 
-	     }
-int potion=3;	//Starting number of user's potions	
-int enemyhp=10;
-	cout<<"An"<<enemy<<"appears!"<<endl;
+	 if(i=0)
+	  Skeleton enemy[i];
+	 if(i=1)
+	   Wolf enemy[1];
+	 if(i=2)
+	   Centaur enemy[i];
+	else 
+		cout<<"something went wrong"<<endl;
+}
+
+cout<<"An"<<enemy<<"appears!"<<endl;
 	cout<<"What will you do?"<<endl;
 int current=2; //Initi
 while(current==2){ 
