@@ -6,13 +6,14 @@ using namespace std;
 
 class Villian //The superclass
 {
-	class Skeleton:public Villian //Splitting up every enemy class into a subclass from the superclass.
-	{
-    string enemyname=Skeleton; //Setting up the enemy name
-    int m_skeletonhealth;	//Set up variables for health of each enemy
-    int m_skeletondamage;	//Set up variables for damage each enemy inflicts
+    class Skeleton:public Villian //Splitting up every enemy class into a subclass from the superclass.
+    {
+    	public:
+    	string enemyname=Skeleton; //Setting up the enemy name
+    	int m_skeletonhealth;	//Set up variables for health of each enemy
+    	int m_skeletondamage;	//Set up variables for damage each enemy inflicts
         
-    void attack(User& enemy);
+   	void attack(User& enemy);
     
     };
     class Wolf:public Villian
