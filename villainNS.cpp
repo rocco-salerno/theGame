@@ -7,13 +7,21 @@ using namespace std;
 
 //Declaring the variables
 
-void Villains::attack(User& enemy)
+void Villains::health(User& enemy)
 {
-	srand(time(NULL));
 	int skeletonhealth = 10; //Enemies' HP
 	int wolfhealth = 15;
 	int centaurhealth = 25;
-	int dragonhealth=40;
+	int dragonhealth = 40;
+	return skeletonhealth;
+	return wolfhealth;
+	return centaurhealth;
+	return dragonhealth;
+}
+	
+void Villains::attack(User& enemy)
+{
+	srand(time(NULL));
 	int skeletondamage = rand()%2 +6; //Damage calculations of each enemy.
 	int wolfdamage = rand()%4 +8;
 	int centaurdamage = rand()%6 +10;
@@ -28,5 +36,8 @@ void Villains::attack(User& enemy)
     	cout<<"You have lost"<<centaurdamage<<"HP."<<endl;
     	cout<<"You have lost"<<dragondamage<<"HP."<<endl;
 	//We need to find a way to only print the correct damage statement to the specific enemy.
-    	return damage; 
+    	return skeletondamage;
+	return wolfdamage;
+	return centaurdamage;
+	return dragondamage;
 }
