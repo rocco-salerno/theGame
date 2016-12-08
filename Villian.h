@@ -1,50 +1,61 @@
-using namespace std;
-#include "User.h"
+#ifndef VILLAINS_H_
+#define VILLAINS_H_
 
 
-class Villians
-{
-    class Skeleton:public Villian
-    {
-        public:
-            string enemyname=Skeleton;
-            int m_enemyhealth;
-            int m_enemydamage;
-        
-            void attack(User& enemy);
-    
-    };
-    class Wolf:public Villian
-    {
-        public:
-        string enemyname=Wolf;
-        int m_enemyhealth=15;
-        int m_enemydamage=4;
-        
-        void attack(User& enemy);
-        
-    };
-    
-    class Centaur:public Villian
-    {
-        public:
-        string enemyname=Centaur;
-        int m_enemyhealth=25;
-        int m_enemydamage=6;
-        
-        void attack(User& enemy);
-    };
-   
-    class Dragon:public Villian
-    {
-        public:
-        string enemyname=Dragon;
-        int m_enemyhealth=40;
-        int m_enemydamage=10;
-        
-        void attack(User& enemy);
-    };
-    private:
-        int m_enemyhealth;
-        int m_enemydamage;
+
+class Villains{
+public:
+	    class Skeleton:public Villains
+	    {
+	    public:
+	        // int m_enemyhealth=10; 
+	        //int m_enemydamage=3;
+	    	void attack(User&);
+	    	void setHealth();
+	    	int getHealth(){return m_enemyhealth;}
+	    	void setDamage();
+
+
+	    };
+	    class Wolf:public Villains
+	    {
+	     public:
+	        //int m_enemyhealth=15;
+	        //int m_enemydamage=4;
+	         void attack(User&);
+	         void setHealth();
+	         int getHealth(){return m_enemyhealth;}
+	         void setDamage();
+
+	    };
+
+	    class Centaur:public Villains
+	    {
+	     public:
+	        //int m_enemyhealth=25;
+	        //int m_enemydamage=6;
+	        void attack(User&);
+	        void setHealth();
+	        int getHealth(){return m_enemyhealth;}
+	        void setDamage();
+	    };
+
+	    class Dragon:public Villains
+	    {
+	     public:
+	       //int m_enemyhealth=40;
+	       // int m_enemydamage=10;
+	        void attack(User&);
+	        void setHealth();
+	        int getHealth(){return m_enemyhealth;}
+	        void setDamage();
+	    };
+	private:
+	    int m_enemyhealth;
+	    int m_enemydamage;
+
 };
+
+
+
+#endif /* VILLAINS_H_ */
