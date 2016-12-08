@@ -18,15 +18,15 @@ void Villains::attack(User& enemy)
 	int wolfdamage = rand()%4 +8;
 	int centaurdamage = rand()%6 +10;
 	int dragondamage = rand()%8 +12;
-    enemy.hp-=skeletondamage;	
-    enemy.hp-=wolfdamage;
-    enemy.hp-=centaurdamage;
-    enemy.hp-=dragondamage;
-    cout<<"You are attacked by the"<<Villains<<"!"<<endl;
-    cout<<"You have lost"<<skeletondamage<<"HP."<<endl;
-    cout<<"You have lost"<<wolfdamage<<"HP."<<endl;
-    cout<<"You have lost"<<centaurdamage<<"HP."<<endl;
-    cout<<"You have lost"<<dragondamage<<"HP."<<endl;
+   	enemy.hp-=skeletondamage;	
+    	enemy.hp-=wolfdamage;
+    	enemy.hp-=centaurdamage;
+    	enemy.hp-=dragondamage;
+    	cout<<"You are attacked by the"<<Villains<<"!"<<endl;
+    	cout<<"You have lost"<<skeletondamage<<"HP."<<endl;
+    	cout<<"You have lost"<<wolfdamage<<"HP."<<endl;
+    	cout<<"You have lost"<<centaurdamage<<"HP."<<endl;
+    	cout<<"You have lost"<<dragondamage<<"HP."<<endl;
 	//We need to find a way to only print the correct damage statement to the specific enemy.
-    return damage; 
+    	return damage; 
 }
