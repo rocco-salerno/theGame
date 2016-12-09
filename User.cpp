@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cstdlib>
 #include "User.h"
-#include "Villain.h"
+#include "Villains.h"
 using namespace std;
 
-int User::attack(class Villain&)
+int User::attack(Villains& enemy)
 {
 	srand(time(NULL));
 	int damage = rand()%6 +5;//random attack number generator
-	Villain.getHealth()-=damage; // enemy health is subtracted from damage generated
+	enemy.m_enemyHealth-=damage; // enemy health is subtracted from damage generated
 	cout<<"You used your sword! You inflicted: "<<damage<<"to the enemy!"<<endl;
    	return damage;
 }
@@ -21,7 +21,7 @@ void User::setPotions()
 {
 	m_potions =5;
 }
-void User::potions(class User) //class for user to use it
+void User::potions(User&) //class for user to use it
 {
 	getHealth();
 	int potions= m_potions;
@@ -32,7 +32,7 @@ void User::potions(class User) //class for user to use it
 	{
 		cout<<"You used a potion!"<<endl;
 		cout<<"You have gained ten HP back!"<<endl;
-		m_health= m_health + 10;
+		 m_hp += 10;
 	}
 
 }
