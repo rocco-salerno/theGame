@@ -39,6 +39,7 @@ return 0;
 int ending()
 {
 cout<<"You have completed the game! Congratulations!"<<endl;
+return 0;
 }
 
 void combat()
