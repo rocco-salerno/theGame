@@ -1,4 +1,10 @@
-//Villian.cpp
+/*
+ * Villains.cpp
+ *
+ *  Created on: Dec 7, 2016
+ *      Author: Vincent
+ */
+
 #include "Villains.h"
 #include "User.h"
 #include <cstdlib>
@@ -7,78 +13,56 @@
 
 using namespace std;
 
-void Villains::Skeleton::attack(User&)
+int Skeleton::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
-   enemy.hp-=damage;
+   user.m_hp-=damage;
    return damage;
 }
-void Villains::Skeleton::setHealth()
+void Skeleton::setHealth()
 {
-	m_enemyhealth = 10;
-}
-
-void Villains::Skeleton::setDamage()
-{
-	m_enemydamage= 3;
+	m_enemyHealth = 10;
 }
 
 
 
-void Villains::Wolf::attack(User&)
+
+
+int Wolf::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
-   enemy.hp-=damage;
+   user.m_hp-=damage;
    return damage;
 }
 
-void Villains::Wolf::setHealth()
+void Wolf::setHealth()
 {
-	m_enemyhealth=15;
+	m_enemyHealth=15;
 }
-void Villains::Wolf::setDamage()\
-{
-	m_enemydamage= 4;
-}
-void Villains::Centaur::attack(User&)
+
+int Centaur::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
-   User.health() -=damage;
+   user.m_hp -=damage;
    return damage;
 }
-void Villains::Centaur::setHealth()
+void Centaur::setHealth()
 {
-	m_enemyhealth = 25;
+	m_enemyHealth = 25;
 }
 
-void Villains::Centaur::setDamage()
-{
-	m_enemydamage=6;
-}
-void Villains::Dragon::attack(User&)
+
+int Dragon::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
-   enemy.hp-=damage;
+   user.m_hp-=damage;
    return damage;
 }
-void Villains::Dragon::setHealth()
+void Dragon::setHealth()
 {
-	m_enemyhealth=40;
+	m_enemyHealth=40;
 }
-void Villains::Dragon::setDamage()
-{
-	m_enemydamage=10;
-}
-Villains::Villains(string enemyname, int enemyhealth, int enemydamage)
-{
-  name=enemyname;
-  health=enemyhealth;
-  damage=enemydamage;
-}
-
-     
-     
