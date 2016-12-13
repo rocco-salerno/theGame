@@ -17,8 +17,6 @@ public:
 class Skeleton : public Villains
 {
 public:
-		// int m_enemyhealth=10;
-	    //int m_enemydamage=3;
 	   int attack(User& user);
 	    int getHealth(){return m_enemyHealth;}
 	    void setDamage();
@@ -27,8 +25,6 @@ public:
 class Wolf: public Villains
 {
 public:
-	 //int m_enemyhealth=15;
-	 //int m_enemydamage=4;
 	 int attack(User& user);
 	 int getHealth(){return m_enemyHealth;}
 	 void setDamage();
@@ -38,8 +34,6 @@ public:
 class Centaur:public Villains
 {
 public:
-	    	//int m_enemyhealth=25;
-	        //int m_enemydamage=6;
 	        int attack(User& user);
 	        int getHealth(){return m_enemyHealth;}
 	        void setDamage();
@@ -49,8 +43,6 @@ public:
 class Dragon:public Villains
 {
 public:
-		 //int m_enemyhealth=40;
-		 // int m_enemydamage=10;
 		 int attack(User& user);
 		 int getHealth(){return m_enemyHealth;}
 		 void setDamage();

@@ -9,7 +9,7 @@ int User::attack(Villains& enemy)
 	srand(time(NULL));
 	int mdamage = rand()%6 +5;//random attack number generator
 	enemy.m_enemyHealth=enemy.m_enemyHealth-mdamage; // enemy health is subtracted from damage generated
-	cout<<"You used your sword! You inflicted "<<mdamage<<"damage to the enemy!"<<endl;
+	cout<<"You used your sword! You inflicted "<<mdamage<<" damage to the enemy!"<<endl;
    	return mdamage;
 }
 
@@ -30,9 +30,10 @@ void User::potions(User&) //class for user to use it
 	else
 	{
 		cout<<"You used a potion!"<<endl;
-		cout<<"You have gained ten HP back!"<<endl;
+		cout<<"You have gained 15 HP back!"<<endl;
 		m_potions-=1;
-		m_hp += 10;
+		m_hp += 15;
+		cout<<"You have "<<m_hp<<" HP!"<<endl;
 	}
 
 }

@@ -17,8 +17,7 @@ void Villains::setHealth(int health)
 
 int Skeleton::attack(User& user)
 {
-   srand(time(NULL));
-	int damage = rand()%6 +5;
+   int damage = rand()%6 +5;
    user.m_hp-=damage;
    cout<<"Skeleton attacked with: "<<damage<<endl;
    return damage;
@@ -26,8 +25,7 @@ int Skeleton::attack(User& user)
 
 int Wolf::attack(User& user)
 {
-   srand(time(NULL));
-	int damage = rand()%6 +5;
+   int damage = rand()%6 +5;
    user.m_hp-=damage;
    cout<<"Wolf attacked with: "<<damage<<endl;
    return damage;
@@ -36,7 +34,7 @@ int Wolf::attack(User& user)
 
 int Centaur::attack(User& user)
 {
-   srand(time(NULL));
+   srand(3);
 	int damage = rand()%6 +5;
    user.m_hp -=damage;
    cout<<"Centaur attacked with: "<<damage<<endl;
@@ -44,8 +42,7 @@ int Centaur::attack(User& user)
 }
 int Dragon::attack(User& user)
 {
-   srand(time(NULL));
-	int damage = rand()%6 +5;
+   int damage = rand()%6 +5;
    user.m_hp-=damage;
    cout<<"Dragon attacked with: "<<damage<<endl;
    return damage;

@@ -1,40 +1,38 @@
-#include <iostream>
-#include <cstring>
-#include <cstdlib>
-#include <vector>
-#include "User.h"
-#include "Villian.h"
+#include <iostream> //Used for cin and cout
+#include <cstring>	//Used to get string (name of user)
+#include <cstdlib> //Used for random function when attacking.
+#include <vector> //Used to put enemies into vector.
+#include "User.h" //Include user class so he or she can fight enemies
+#include "Villian.h" //Include villian class for user to fight
 using namespace std;
 
-
-
-int gameover()
+int gameover() //Called when player dies
 {
 cout<<"You have fallen. Game over!"<<endl;
 return 0;
 }
 
-int ending()
+int ending() //Called if player defeats the dragon
 {
 cout<<"Just kidding! You did it!"<<endl;
 cout<<"You have defeated the dragon and completed the game! Congratulations!"<<endl;
 return 0;
 }
 
-int thanks()
+int thanks() //Called with int ending()
 {
 cout<<"Thanks for playing!"<<endl;
 return 0;
 }
 
-void combat()
+void combat() //Battle system
 {
 User name;
-name.setHealth(100);
-name.setPotions(5);
-vector <Villains*> enemy(4);
-enemy[0]= new Skeleton;
-enemy[0]->setHealth(10);
+name.setHealth(100); //Declares user's health.
+name.setPotions(3);	 //Declares number of potions owned by user.
+vector <Villains*> enemy(4);  //Put enemies into array. They will be called in the while loop.
+enemy[0]= new Skeleton;	
+enemy[0]->setHealth(10);	//Declare enemies' health. This is done for all 4 enemies.
 enemy[1]= new Wolf;
 enemy[1]->setHealth(15);
 enemy[2]= new Centaur;
@@ -52,7 +50,9 @@ while(enemy[i]->m_enemyHealth > 0 && name.m_hp >0 && close<=3)
 	if(battle==1)
 	{
 		name.attack(*enemy[i]);
-		enemy[i]->attack(name);
+		if(enemy[i]->m_enemyHealth>0)
+			enemy[i]->attack(name);
+				
 		cout<<"Your HP is: "<< name.m_hp <<endl;
 		cout<<"The enemy has: "<<enemy[i]->m_enemyHealth<<" HP"<<endl;
 		
@@ -66,7 +66,6 @@ while(enemy[i]->m_enemyHealth > 0 && name.m_hp >0 && close<=3)
 		{
 			cout<<"You have defeated the enemy!"<<endl;
 			cout<<"A new enemy appears!"<<endl;
-			enemy[i]=enemy[i]+1;
 			close=close+1;
 		}
 		
@@ -74,6 +73,7 @@ while(enemy[i]->m_enemyHealth > 0 && name.m_hp >0 && close<=3)
 	if(battle==2)
 	{
 		name.potions(name);
+		enemy[i]->attack(name);
 	}
 	if(close==3)
 	{
@@ -112,7 +112,7 @@ else
 	return 0;
 }
 
-int main()
+int main() //Main function. Only call the introduction function.
 {
 	startgame();
 }
