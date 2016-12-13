@@ -45,6 +45,8 @@ return 0;
 void combat()
 {
 User name;
+name.setHealth(100);
+name.setPotions(5);
 vector <Villains*> enemy(3);
 enemy[0]= new Skeleton;
 enemy[0]->setHealth(10);
