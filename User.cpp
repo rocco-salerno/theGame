@@ -13,18 +13,17 @@ int User::attack(Villains& enemy)
    	return damage;
 }
 
-void User::setHealth()
+void User::setHealth(int userHealth)
 {
-	m_hp =100;
+	m_hp =userHealth;
 }
-void User::setPotions()
+void User::setPotions(int userPotions)
 {
-	m_potions =5;
+	m_potions =userPotions;
 }
 void User::potions(User&) //class for user to use it
 {
 	getHealth();
-	int potions= m_potions;
 	if (potions==0) // if user has no more it
 		cout<<"You are out of potions!"<<endl; //print this.
 	//if the use has potions, use one and add 10 hp to user health
@@ -32,7 +31,8 @@ void User::potions(User&) //class for user to use it
 	{
 		cout<<"You used a potion!"<<endl;
 		cout<<"You have gained ten HP back!"<<endl;
-		 m_hp += 10;
+		m_potions-=1;
+		m_hp += 10;
 	}
 
 }
