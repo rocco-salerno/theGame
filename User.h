@@ -13,8 +13,8 @@ public:
 	void potions(User&);//health the user has
 	int attack(Villains& enemy);
 	int getHealth(){return m_hp;}
-	void setHealth();
-	void setPotions();
+	void setHealth(int userHealth);
+	void setPotions(int userPotions);
 	int m_hp;
 private:
 	int m_potions; //5 potions for the user.
