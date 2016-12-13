@@ -1,10 +1,3 @@
-/*
- * Villains.cpp
- *
- *  Created on: Dec 7, 2016
- *      Author: Vincent
- */
-
 #include "Villains.h"
 #include "User.h"
 #include <cstdlib>
@@ -16,57 +9,44 @@ using namespace std;
 Villains::~Villains(){
 	delete this;
 }
+void Villains::setHealth(int health)
+{
+	m_enemyHealth= health;
+}
+
 
 int Skeleton::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
    user.m_hp-=damage;
+   cout<<"Skeleton attacked with: "<<damage<<endl;
    return damage;
 }
-void Skeleton::setHealth()
-{
-	m_enemyHealth = 10;
-}
-
-
-
-
 
 int Wolf::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
    user.m_hp-=damage;
+   cout<<"Wolf attacked with: "<<damage<<endl;
    return damage;
 }
 
-void Wolf::setHealth()
-{
-	m_enemyHealth=15;
-}
 
 int Centaur::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
    user.m_hp -=damage;
+   cout<<"Centaur attacked with: "<<damage<<endl;
    return damage;
 }
-void Centaur::setHealth()
-{
-	m_enemyHealth = 25;
-}
-
-
 int Dragon::attack(User& user)
 {
    srand(time(NULL));
 	int damage = rand()%6 +5;
    user.m_hp-=damage;
+   cout<<"Dragon attacked with: "<<damage<<endl;
    return damage;
-}
-void Dragon::setHealth()
-{
-	m_enemyHealth=40;
 }
