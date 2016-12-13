@@ -21,10 +21,4 @@ private:
 
 };
 
-
-
-
 #endif /* USER_H_ */
-
-
-

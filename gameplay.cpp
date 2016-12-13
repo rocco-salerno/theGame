@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cstring>
+#include <cstdlib>
+#include <vector>
 #include "User.h"
-#include "Villain.h"
+#include "Villian.h"
 using namespace std;
 
 int startgame()
@@ -15,76 +17,100 @@ if(choice==1)
 	cout<<"Welcome!"<<endl;
 	cout<<"Enter your name: "<<endl;
 	cin>>name;
-	User name;
 	cout<<"Hello there,"<<name<<"!"<<endl;
 	cout<<"Welcome to the land of dungeons and dragons! Your goal is to defeat the dragon that attacked our village!"<<endl;
+	cout<<"Just take note that there will be other enemies in your way!"<<endl;
 	cout<<"You will be given a sword and some potions. Best of luck!"<<endl;
 }
 else
 {
 	cout<<"Ending program"<<endl;
-	break;
 }
 	return 0;
-}
-
-
-int combat()
-{ 
-string enemy= new int[3]=[0,1,2];
-int i=0;
-for(int i=0;i==2;i++)
-{
-	 if(i==0)
-	   Villians::Skeleton enemy[i];
-	 if(i==1)
-	   Villians::Wolf enemy[i];
-	 if(i==2)
-	   Villians::Centaur enemy[i];
-	else 
-		cout<<"something went wrong"<<endl;
-}
-
-cout<<"An"<<enemy<<"appears!"<<endl;
-	cout<<"What will you do?"<<endl;
-int current=2; //Used for battle system
-int battle;
-while(current==2){ 
-	cout<<"Press 1 to attack, or 2 to use a potion."<<endl;
-	cin>>battle;
-if(battle==1)
-	cout<<"You used your sword!"<<endl;
-	cout<<damage<<"points of damage to"<<enemy<<endl;
-	enemyhp=enemyhp-10;
-if(battle==2)
-	cout<<"You used a potion!"<<endl;
-	cout<<"You healed ten HP!"<<endl;
-	potion=potion-1;
-	cout<<"You have:"<<potion<<"potions left."<<endl;
-if(enemyhp<=0)
-	cout<<"You have defeated the enemy!"<<endl;
-	continue;
-if(userhp<=0)
-	current=1;
-	gameover();
-	break;
-}
-}
-
-int ending()
-{
-cout<<"You have completed the game! Congratulations!"<<endl;
 }
 
 int gameover()
 {
 cout<<"You have fallen. Game over!"<<endl;
+return 0;
+}
+
+int ending()
+{
+cout<<"Just kidding! You did it!"<<endl;
+cout<<"You have defeated the dragon and completed the game! Congratulations!"<<endl;
+return 0;
+}
+
+int thanks()
+{
+cout<<"Thanks for playing!"<<endl;
+return 0;
+}
+
+void combat()
+{
+User name;
+name.setHealth(100);
+name.setPotions(5);
+vector <Villains*> enemy(4);
+enemy[0]= new Skeleton;
+enemy[0]->setHealth(10);
+enemy[1]= new Wolf;
+enemy[1]->setHealth(15);
+enemy[2]= new Centaur;
+enemy[2]->setHealth(25);
+enemy[3]= new Dragon;
+enemy[3]->setHealth(40);
+int battle;
+int close=0;
+for(int i =0; i <= enemy.size();i++)
+{
+while(enemy[i]->m_enemyHealth > 0 && name.m_hp >0 && close<=3)
+{
+	cout<<"Press 1 to attack or 2 to use a potion."<<endl;
+	cin>>battle;
+	if(battle==1)
+	{
+		name.attack(*enemy[i]);
+		enemy[i]->attack(name);
+		cout<<"Your HP is: "<< name.m_hp <<endl;
+		cout<<"The enemy has: "<<enemy[i]->m_enemyHealth<<" HP"<<endl;
+		
+		if(name.m_hp<=0)
+		{
+			gameover();
+			break;
+		}
+		
+		if(enemy[i]->m_enemyHealth<=0)
+		{
+			cout<<"You have defeated the enemy!"<<endl;
+			cout<<"A new enemy appears!"<<endl;
+			enemy[i]=enemy[i]+1;
+			close=close+1;
+		}
+		
+	}
+	if(battle==2)
+	{
+		name.potions(name);
+	}
+	if(close==3)
+	{
+		cout<<"You are battling the dragon!"<<endl;
+	}
+	if(close==4)
+	{
+		ending();
+		thanks();
+	}
+}
+}
 }
 
 int main()
 {
-startgame();
-combat();
-ending();
-gameover();
+	startgame();
+	combat();
 }
