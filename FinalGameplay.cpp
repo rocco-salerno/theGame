@@ -1,10 +1,9 @@
-
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
 #include <vector>
-#include "User.h"
-#include "Villains.h"
+#include "user.h"
+#include "villains.h"
 using namespace std;
 
 int startgame()
@@ -49,6 +48,7 @@ vector <Villains*> enemy(3);
 enemy[0]= new Skeleton;
 enemy[1]= new Wolf;
 enemy[2]= new Centaur;
+
 while(name.m_hp != 0 )
 {
 	//cout<<"An"<<enemy<<"appears!"<<endl;
@@ -56,17 +56,17 @@ while(name.m_hp != 0 )
 	int battle;
 for(int i =0; i <= enemy.size();i++)
 {
-while(enemy[i]->m_enemyHealth != 0 || name.m_hp !=0)
+while(enemy[i]->m_enemyHealth > 0 || name.m_hp >0)
 {
 	cout<<"Press 1 to attack, or 2 to use a potion."<<endl;
 	cin>>battle;
 	if(battle==1)
 	{
 	name.attack(*enemy[i]);
-		cout<<"You used your sword!"<<endl;
 		if(enemy[i]->m_enemyHealth<=0)
 		{
 			cout<<"You have defeated the enemy!"<<endl;
+			cout<<enemy[i]->m_enemyHealth;
 			break;
 		}
 		else
