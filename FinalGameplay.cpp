@@ -2,8 +2,8 @@
 #include <cstring>
 #include <cstdlib>
 #include <vector>
-#include "user.h"
-#include "villains.h"
+#include "User.h"
+#include "Villains.h"
 using namespace std;
 
 int startgame()
@@ -41,13 +41,17 @@ cout<<"You have completed the game! Congratulations!"<<endl;
 return 0;
 }
 
+
 void combat()
 {
 User name;
 vector <Villains*> enemy(3);
 enemy[0]= new Skeleton;
+enemy[0]->setHealth(10);
 enemy[1]= new Wolf;
+enemy[1]->setHealth(15);
 enemy[2]= new Centaur;
+enemy[2]->setHealth(25);
 
 while(name.m_hp != 0 )
 {
@@ -56,6 +60,7 @@ while(name.m_hp != 0 )
 	int battle;
 for(int i =0; i <= enemy.size();i++)
 {
+
 while(enemy[i]->m_enemyHealth > 0 || name.m_hp >0)
 {
 	cout<<"Press 1 to attack, or 2 to use a potion."<<endl;
