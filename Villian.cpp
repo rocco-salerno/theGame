@@ -13,6 +13,10 @@
 
 using namespace std;
 
+Villains::~Villains(){
+	delete this;
+}
+
 int Skeleton::attack(User& user)
 {
    srand(time(NULL));
