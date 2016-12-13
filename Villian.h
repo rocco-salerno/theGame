@@ -5,8 +5,9 @@ class User;
 class Villains
 {
 public:
-	virtual int attack(User& user);
-	virtual ~Villains();
+	virtual int attack(User& user){return 0;}
+	~Villains();
+	 void setHealth(int health);
 	int m_enemyHealth;
 
 
@@ -19,7 +20,6 @@ public:
 		// int m_enemyhealth=10;
 	    //int m_enemydamage=3;
 	   int attack(User& user);
-	    void setHealth();
 	    int getHealth(){return m_enemyHealth;}
 	    void setDamage();
 };
@@ -30,7 +30,6 @@ public:
 	 //int m_enemyhealth=15;
 	 //int m_enemydamage=4;
 	 int attack(User& user);
-	 void setHealth();
 	 int getHealth(){return m_enemyHealth;}
 	 void setDamage();
 
@@ -42,7 +41,6 @@ public:
 	    	//int m_enemyhealth=25;
 	        //int m_enemydamage=6;
 	        int attack(User& user);
-	        void setHealth();
 	        int getHealth(){return m_enemyHealth;}
 	        void setDamage();
 	    };
@@ -54,11 +52,10 @@ public:
 		 //int m_enemyhealth=40;
 		 // int m_enemydamage=10;
 		 int attack(User& user);
-		 void setHealth();
 		 int getHealth(){return m_enemyHealth;}
 		 void setDamage();
 
 };
 
 #endif /* VILLAINS_H_ */
-#endif /* VILLAINS_H_ */
+
